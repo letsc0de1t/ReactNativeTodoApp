@@ -1,0 +1,33 @@
+to make apk build
+
+1. npm install -g eas-cli
+2. eas login { email: jay@onecorp.co.in ,
+               password: jayonecorp }
+                
+3. eas build:configure
+4. change eas.json for apk
+
+{
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "preview4": {
+      "distribution": "internal"
+    },
+    "production": {}
+  }
+}
+
+5. eas build -p android --profile preview
+6. Open url and download apk
