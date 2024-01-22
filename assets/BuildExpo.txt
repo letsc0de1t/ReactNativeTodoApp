@@ -1,9 +1,7 @@
 to make apk build
 
 1. npm install -g eas-cli
-2. eas login { email: jay@onecorp.co.in ,
-               password: jayonecorp }
-                
+2. eas login             
 3. eas build:configure
 4. change eas.json for apk
 
